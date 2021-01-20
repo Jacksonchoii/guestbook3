@@ -73,10 +73,7 @@ public class GuestController {
 		
 		if(count == 1) { //삭제 성공하면 리스트로
 			return "redirect:/gbc/addList";
-		} else { // 삭제 실패시  다시 시도하라고 알려주고 싶음 --> 어떻게?? count 를 보내준다 == 0 
-			
-			//틀려서 다시 시도하라고 알려주기 위해 count 데이터 전송
-			model.addAttribute("retry", count);
+		} else { // 삭제 실패시  다시 시도하라고 알려주고 싶음 --> 어떻게?? 
 			
 			return "deleteForm";
 		}
